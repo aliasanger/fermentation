@@ -1,0 +1,15 @@
+fastp \
+    -i $current_R1 \
+    -o $tmp_R1 \
+    -I $current_R2 \
+    -O $tmp_R2 \
+    --low_complexity_filter \
+    --overrepresentation_analysis \
+    --trim_poly_g --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT \
+    --trim_poly_x \
+    --cut_right --cut_right_window_size 5 --cut_right_mean_quality 15 \
+    --qualified_quality_phred 33 \
+    --length_required 50 \
+    --html ./fastq_33/${sample}_fastplog.html -R "Elliott_Meta2026_Quality_Trimming_fastp" \
+    --json ./fastq_33/${sample}_fastplog.json \
+    --thread $SLURM_CPUS_PER_TASK
