@@ -1,1 +1,43 @@
 # fermentation
+
+# This repository contains all the code used to generate MAGs for xx 
+
+# The order of analysis is as follows 
+# STEP 1: run fastp https://github.com/opengene/fastp 
+# A tool designed to provide ultrafast all-in-one preprocessing and quality control for FastQ data.
+fastp.sh
+
+# STEP 2: run assembly using megaHIT https://github.com/voutcn/MEGAHIT
+megahit.sh
+
+# STEP 3: rename contigs using custom script from Baker lab
+rename_contigs.sh
+
+# STEP 4: run metaquast for genome assembly evaluation https://github.com/ablab/quast
+# QUAST stands for QUality ASsessment Tool. It evaluates genome/metagenome assemblies by computing various metrics. The current QUAST toolkit includes the general QUAST tool for genome assemblies, MetaQUAST, the extension for metagenomic datasets,
+metaquast.sh 
+
+# STEP 5: map with minimap2 https://github.com/lh3/minimap2
+# minimpa2 is a versatile sequence alignment program that aligns dna or rna sequences against a reference, our use case is aligning Illumina single- or paired-end reads
+minimap2.sh
+
+# STEP 6: flagstat https://www.htslib.org/doc/samtools-flagstat.html
+flagstat.sh
+
+# STEP 7: depths
+depths.sh 
+
+# STEP 8: tnfs - calculate tetranucleotide frequency 
+tnf_batch_all.sh 
+tnf.py
+
+# STEP 9: danaseq - binning (comebin, lorbin, magscot, mabin, metabat, semibin, vamb) -> dastool to pick the best from each + annotation with bakta and some other add ons https://github.com/rec3141/danaSeq
+danaseq.sh 
+
+# STEP 10: checkm2 https://github.com/chklovski/CheckM2
+checkm2.sh
+
+# STEP 11: dereplication with dRep https://github.com/MrOlm/drep 
+# dRep is a python program for rapidly comparing large numbers of genomes. dRep can also "de-replicate" a genome set by identifying groups of highly similar genomes and choosing the best representative genome for each genome set.
+drep_apptainer_comp90_con5.sh 
+
