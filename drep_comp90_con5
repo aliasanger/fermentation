@@ -1,0 +1,39 @@
+#!/bin/bash
+#SBATCH --time=00:45:00
+#SBATCH --mem=5G
+#SBATCH --cpus-per-task=6
+#SBATCH --account=%ACCOUNT%
+#SBATCH --job-name=drep
+#SBATCH --array=1-7
+set -euo pipefail
+set -x
+module load apptainer
+
+#ANI values for threshold test
+ani=$(sed -n "${SLURM_ARRAY_TASK_ID}p" ani_thresholds.txt) #ANI threshold to form secondary clusters (Default: 0.95)
+
+#Required inputs
+SIF=/path/to/drep/drep.sif
+checkm2_result=/path/to/directory/fastq_33/danaseq/dastool_bins/checkm2_output/quality_report.csv
+input=/path/to/directory/fastq_33/danaseq/dastool_bins
+extension='.fa' #File extension on genome files
+output=/path/to/directory/fastq_33/danaseq/dastool_bins/drep_output_comp50_con10_ani_${ani}
+mkdir -p ${output}
+completeness_threshold='90' #Minimum genome completeness (default: 75)
+contam_threshold='5' #Maximum genome contamination (default: 25)
+
+#Run dRep
+apptainer exec \
+  --bind ${checkm2_result} \
+  --bind ${input} \
+  --bind ${output} \
+  ${SIF} \
+  dRep dereplicate \
+    ${output} \
+    -g ${input}/*${extension} \
+    -comp ${completeness_threshold} \
+    -con ${contam_threshold} \
+    -sa ${ani} \
+    -d \
+    -p $SLURM_CPUS_PER_TASK \
+    --genomeInfo ${checkm2_result}
