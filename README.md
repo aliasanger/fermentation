@@ -36,7 +36,7 @@ depths.sh
 **STEP 8: tnfs, calculate tetranucleotide frequency**
 
 tnf_batch_all.sh 
-tnf.py
+[tnf.py](https://github.com/aliasanger/fermentation/blob/9357d085485749d6eb5ef26f9f2f2c0427bbf174/tnf.py)
 
 **STEP 9: danaseq https://github.com/rec3141/danaSeq**
 danaseq does binning (comebin, lorbin, magscot, mabin, metabat, semibin, vamb) -> dastool to pick the best from each + annotation with bakta and some other add ons 
