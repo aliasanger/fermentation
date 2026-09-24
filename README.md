@@ -28,7 +28,7 @@ minimpa2 is a versatile sequence alignment program that aligns dna or rna sequen
 
 **STEP 6: flagstat https://www.htslib.org/doc/samtools-flagstat.html**
 
-flagstat.sh
+[flagstat.sh](https://github.com/aliasanger/fermentation/blob/a9675c5f640a4b838a24bbe22e5e952bf92f2ff5/flagstat.sh)
 
 **STEP 7: depths**
 
