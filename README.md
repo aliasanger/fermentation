@@ -19,7 +19,7 @@ rename_contigs.sh
 **STEP 4: run metaquast for genome assembly evaluation https://github.com/ablab/quast**
 QUAST stands for QUality ASsessment Tool. It evaluates genome/metagenome assemblies by computing various metrics. The current QUAST toolkit includes the general QUAST tool for genome assemblies, MetaQUAST, the extension for metagenomic datasets,
 
-metaquast.sh 
+[metaquast.sh](https://github.com/aliasanger/fermentation/blob/114ec696714deb3676eee5be5db5f0c6aaef146e/metaquast.sh)
 
 **STEP 5: map with minimap2 https://github.com/lh3/minimap2**
 minimpa2 is a versatile sequence alignment program that aligns dna or rna sequences against a reference, our use case is aligning Illumina single- or paired-end reads
