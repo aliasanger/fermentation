@@ -2,7 +2,8 @@
 This repository contains all the code used to generate MAGs for xx 
 
 The order of analysis is as follows 
-STEP 1: run fastp https://github.com/opengene/fastp 
+
+**STEP 1: run fastp https://github.com/opengene/fastp **
 A tool designed to provide ultrafast all-in-one preprocessing and quality control for FastQ data.
 
 [fastp.sh](https://github.com/aliasanger/fermentation/blob/97475f47bce62e12f412740b86a04f66d42f46c4/fastp.sh)
