@@ -1,8 +1,16 @@
+#!/bin/bash
+#SBATCH --time=24:00:00
+#SBATCH --account=%ACCOUNT%
+#SBATCH --cpus-per-task=32
+#SBATCH --array=1-8
+#SBATCH --job-name=danaseq_run
+#SBATCH --mem=250G
+
 #LAUNCH DANASEQ PIPELINE FOR BINNING, GENE CALLING, AND FUNCTIONAL ANNOTATION (this runs everything but the visualization step, which is buggy)**
 sample=$(sed -n "${SLURM_ARRAY_TASK_ID}p" /path/to/directory/samplenames.txt)
-mkdir -p /scratch/asanger/Elliott_Meta2026/fastq_33/danaseq/${sample}
+mkdir -p /path/to/directory/danaseq/${sample}
 module load apptainer
-/path/to.apptainer/run-mag-analysis.sh --apptainer \
+/path/to/apptainer/run-mag-analysis.sh --apptainer \
   --sif /path/to/sif/danaseq-mag-analysis-custom.sif \
   --annotator bakta \
   --bakta_extra \
