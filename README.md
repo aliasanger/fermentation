@@ -35,6 +35,7 @@ depths.sh
 
 **STEP 8: tnfs, calculate tetranucleotide frequency**
 
+upload [checkm_requirements.txt ](https://github.com/aliasanger/fermentation/blob/42629d568aa2698f78cfa22d90bd474efe223fd8/checkm_requirements.txt)
 tnf_batch_all.sh 
 [tnf.py](https://github.com/aliasanger/fermentation/blob/9357d085485749d6eb5ef26f9f2f2c0427bbf174/tnf.py)
 
