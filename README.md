@@ -47,7 +47,8 @@ danaseq does binning (comebin, lorbin, magscot, mabin, metabat, semibin, vamb) -
 [danaseq.sh](https://github.com/aliasanger/fermentation/blob/97475f47bce62e12f412740b86a04f66d42f46c4/danaseq.sh)
 
 **STEP 10: checkm2 https://github.com/chklovski/CheckM2**
-checkm2.sh
+
+[checkm2.sh](https://github.com/aliasanger/fermentation/blob/895d59f3856fdbe9f9eeb9670af072b32c254aff/checkm2.sh)
 
 **STEP 11: dereplication with dRep https://github.com/MrOlm/drep**
 dRep is a python program for rapidly comparing large numbers of genomes. dRep can also "de-replicate" a genome set by identifying groups of highly similar genomes and choosing the best representative genome for each genome set.
