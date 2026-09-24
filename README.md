@@ -53,5 +53,6 @@ danaseq does binning (comebin, lorbin, magscot, mabin, metabat, semibin, vamb) -
 
 **STEP 11: dereplication with dRep https://github.com/MrOlm/drep**
 dRep is a python program for rapidly comparing large numbers of genomes. dRep can also "de-replicate" a genome set by identifying groups of highly similar genomes and choosing the best representative genome for each genome set.
-drep_apptainer_comp90_con5.sh 
+
+[drep_apptainer_comp90_con5](https://github.com/aliasanger/fermentation/blob/cad0b774003132616efc2b60daa229922b04347d/drep_comp90_con5)
 
