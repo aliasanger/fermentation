@@ -12,9 +12,9 @@ A tool designed to provide ultrafast all-in-one preprocessing and quality contro
 
 [megahit.sh](https://github.com/aliasanger/fermentation/blob/97475f47bce62e12f412740b86a04f66d42f46c4/megahit.sh)
 
-**STEP 3: rename contigs using custom script from Baker lab**
+**STEP 3: rename contigs**
 
-rename_contigs.sh
+[rename_contigs.sh](https://github.com/aliasanger/fermentation/blob/c35713b6fd590f7d59e1ac93c812f0d83f401be0/rename_contigs.sh)
 
 **STEP 4: run metaquast for genome assembly evaluation https://github.com/ablab/quast**
 QUAST stands for QUality ASsessment Tool. It evaluates genome/metagenome assemblies by computing various metrics. The current QUAST toolkit includes the general QUAST tool for genome assemblies, MetaQUAST, the extension for metagenomic datasets,
