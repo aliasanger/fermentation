@@ -31,7 +31,8 @@ minimpa2 is a versatile sequence alignment program that aligns dna or rna sequen
 flagstat.sh
 
 **STEP 7: depths**
-depths.sh 
+
+[depths.sh ](https://github.com/aliasanger/fermentation/blob/01c45fce80ad8e2297b3195963a63eaafb45fc22/tnf_batch_all.sh)
 
 **STEP 8: tnfs, calculate tetranucleotide frequency**
 
