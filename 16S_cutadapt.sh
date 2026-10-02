@@ -14,6 +14,10 @@ do
 
 done
 
+# check how many reads were retained
+paste samples_5 <(grep "passing" cutadapt_primer_trimming_stats.txt | cut -f3 -d "(" | tr -d ")") <(grep "filtered" cutadapt_primer_trimming_stats.txt | cut -f3 -d "(" | tr -d ")")
+# c2 fraction of reads were retained in each sample - all above 99% 
+# c3: fraction of bps were retained in each sample - all above 92%
 
 mkdir trimmed_fastqfiles
 fastqc *_trimmed.fastq.gz -o trimmed_fastqfiles 
